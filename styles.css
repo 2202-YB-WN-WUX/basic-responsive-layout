@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Miriam Libre', sans-serif;
+  font-weight:800;
+}
+
+p, a, span {
+  font-family: 'Miriam Libre', sans-serif;
+}
+
+/* general */
+
+body {
+  /* fallback color */
+  /* background: rgb(76,67,232); */
+  /* background: linear-gradient(128deg, rgba(76,67,232,1) 0%, rgba(0,212,255,1) 100%); */
+  padding-bottom:100px;
+  background-color: #F7EFDF;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+/* general */
+
+.full-black-border {
+  border: 2px solid black;
+}
+
+/* navbar */
+
+nav {
+  background-color: white;
+  padding: 20px;
+  display:flex;
+  position:sticky;
+  top:0;
+  left:0;
+  border-bottom: 2px solid black;
+}
+
+#nav-links {
+  padding:0;
+  width:70%;
+  text-align: right;
+  display:none;
+  font-size:18px;
+}
+
+#logo-box {
+  width:40%;
+  font-size:30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#nav-links li {
+  display: inline-block;
+  padding:10px 20px;
+  margin-right:20px;
+  border-radius:10px;
+  font-family: 'Miriam Libre', sans-serif;
+}
+
+#menu-container {
+  display:block;
+  font-size:28px;
+  width: 100%;
+  text-align: right;
+}
+
+/* hero section */
+
+#hero-section {
+  padding:50px 20px;
+  background-image: url("img/iceland.jpg");
+  background-size:cover;
+  /* Resize the background image to make sure the image is fully visible */
+  /* background-size:contain; */
+  /* background position - the two numbers are x and y */
+  background-position: 0% 0%;
+  /* image overlay */
+  background-image: linear-gradient(128deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%), url("img/iceland.jpg");
+  text-align:center;
+  border-bottom: 2px solid black;
+}
+
+#hero-section h1 {
+  font-size:50px;
+  margin-bottom:30px;
+  text-shadow: 0px 2px 12px rgba(255, 255, 255, 1), 0px 2px 12px rgba(255, 255, 255, 1);
+}
+
+#hero-section p {
+  font-size: 20px;
+  margin-bottom:30px;
+  text-shadow: 0px 2px 12px rgba(255, 255, 255, 1), 0px 2px 12px rgba(255, 255, 255, 1);
+}
+
+#hero-section a {
+  /* with display: inline-block, the top and bottom margins/paddings are respected,  */
+  /* but with display: inline they are not. */
+  display:inline-block;
+  font-size: 18px;
+  padding:15px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+}
+
+#dropdown {
+  background-color: white;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+  padding:20px 20px;
+  border-radius:10px;
+  display:none;
+  position:absolute;
+  top:63px;
+}
+
+#dropdown a {
+  padding:5px;
+  display:block;
+}
+
+#about:hover #dropdown {
+  display:block;
+}
+
+#color-code {
+  height:500px;
+  background-color: black;
+}
+
+/* sections */
+
+.section-container {
+  padding:0 20px;
+}
+
+/* feature section */
+
+#feature-box-container {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  width:100%;
+  text-align: center;
+  padding:0px 0px 10px 0px;
+
+}
+
+.feature-box h3{
+  font-size:25px;
+  margin: 15px 0;
+}
+
+.feature-box i {
+  font-size:40px;
+}
+
+.feature-content {
+    background-color:white;
+    padding:50px 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+}
+
+#feature-section h2{
+    text-align:center;
+    font-size:40px;
+    margin: 50px 0;
+}
+
+#feature-section .feature-blurb {
+    margin: 50px 0;
+    text-align:center;
+    font-size:20px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #color-code {
+    background-color: green;
+  }
+
+  #hero-section h1 {
+    font-size:60px;
+  }
+
+  #hero-section p {
+    font-size: 24px;
+  }
+
+  #hero-section a {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #color-code {
+    background-color: orange;
+  }
+
+  #nav-links {
+    display:block;
+  }
+  #menu-container {
+    display:none;
+  }
+  #hero-section {
+    background-position: 0% 50%;
+  }
+  .feature-box {
+    width:33.33%;
+    padding:0px 30px;
+  }
+  #feature-section h2{
+      text-align:center;
+      font-size:40px;
+  }
+  .section-container {
+    padding:0px;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #feature-box-container {
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0px 170px;
+  }
+  #color-code {
+    background-color: pink;
+  }
+  #hero-section {
+    padding:250px 200px;
+    text-align: left;
+  }
+
+  #hero-section h1 {
+    font-size:70px;
+  }
+
+  #hero-section p {
+    font-size: 30px;
+    max-width:600px;
+  }
+
+  #hero-section a {
+    font-size: 20px;
+    padding:20px 30px;
+  }
+  #feature-section h2{
+    margin: 100px 0 50px 0;
+  }
+  #feature-section .feature-blurb {
+      margin: 30px 0 60px 0;
+  }
+}
